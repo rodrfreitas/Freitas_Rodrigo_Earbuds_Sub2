@@ -1,4 +1,4 @@
-# Earbuds Sub 1 - MMED-3039
+# Earbuds Sub 2 - MMED-3039
 
 Earbuds Sub 2 - Earbuds Website
 
