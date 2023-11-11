@@ -12,7 +12,6 @@
     display: block;
     align-self: center;
     width: 127px;
-    margin-top: 18px;
 }
 
 #main-nav {
@@ -45,7 +44,7 @@
     display: block;
     height: 100vh;
     width: 100vw;
-    background-color: #000000;
+    background-color: #00B3A6;
     position: absolute;
     z-index: 2;
     top: 0;
@@ -60,9 +59,10 @@
  
  #main-nav ul li a {
     display: block;
-    padding: 10px 0 10px 0;
+    padding: 40px 0 10px 0;
     text-align: center;
-    color: #626262;
+    text-decoration: none;
+    font-family: a.$body-font-family;
     font-size: 35px;
     color: #fff;
  }
@@ -121,11 +121,11 @@
     #main-nav ul li a {
         display: inline;
         color: #2e2e2e;
-        font-size: 28px;
+        font-size: 22px;
     }
 
     #burger-con ul li {
-        margin-right: 28px;
+        margin-right: 22px;
     }
 
     #burger-con ul li:last-child {

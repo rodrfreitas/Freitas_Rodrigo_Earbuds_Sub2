@@ -1,3 +1,5 @@
+@use '../abstracts' as a;
+
 html {
     scroll-behavior: smooth;
 }
@@ -21,28 +23,115 @@ html {
 }
 
 body {
-    background-color: #FA8500;
+    background-color: a.$primary-color;
 }
 
 #hero-main {
-    height: 300px;
+    margin-top: 30px;
+    text-align: center;
 
     h2 {
-        color: white;
-        font-size: 22px;
+        color: a.$body-text-color;
+        font-display: a.$hero-font-family;
+        font-size: 38px;
+        font-weight: 900;
+        // letter-spacing: 18px;
         margin: auto 0;
+        margin-bottom: 20px;
+    }
+}
+
+#partners-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    background-color: #fff;
+    margin-top: 50px;
+
+    h2 {
+        text-align: center;
+        width: 100%;
+    }
+
+    img {
+        width: 130px;
+        text-align: center;
+        filter: grayscale(1);
+    }
+
+    img:hover {
+        filter: grayscale(0);
     }
 }
 
 #about-section {
+    margin-top: 50px;
+    text-align: center;
+
     h2 {
-        color: white;
+        color: a.$body-text-color;
         margin: auto;
+        margin-bottom: 30px;
+        text-align: center;
+        line-height: 40px;
+
+    }
+
+    p {
+        text-align: left;
+    }
+
+    img {
+        margin-bottom: 10px;
     }
 }
 
 #about-content {
-    height: 150px;
+    margin-bottom: 50px;
+}
+
+#about-icons {
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    p {
+        margin-top: 15px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+}
+
+.yellow-circle {
+    background-color: #F8C200;
+    border-radius: 50%;
+    width: 80px;
+    width: 80px;
+    padding: 10px;
+    color: white;
+}
+
+#animation-content {
+    margin: 0;
+    padding: 0;
+}
+
+#scr-animation {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#specs {
+    margin-top: 50px;
+}
+
+#specs-content {
+    height: 1200px;
+    text-align: center;
 }
 
 #model-canvas {

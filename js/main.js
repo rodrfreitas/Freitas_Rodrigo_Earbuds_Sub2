@@ -3,6 +3,21 @@
     //console.log("IIFE Fired");
     //////////////////////////////////variables
 
+    //SCROLL ANIMATION STUFF
+    const canvas = document.querySelector("#explode-view");
+    const context = canvas.getContext("2d");
+
+    canvas.width = 1920;
+    canvas.height = 1080;
+
+    const frameCount = 200; //how many still frames do we have?
+    const images = []; //array to hold all of our images
+
+    //object literal, that has a property of frame to hold the current frame
+    const buds = {
+      frame: 0
+    }
+
     //MODEL VIEWER STUFF
     const model = document.querySelector("#model");
     const hotspots = document.querySelectorAll(".Hotspot");
@@ -11,8 +26,29 @@
     let button = document.querySelector("#button");
     let burgerCon = document.querySelector("#burger-con");
 
-    //Array with content for the earbuds hotspots
+    //SCROLL ANIMATION
+    //run a for loop to populate our images array
+    for(let i=0; i<frameCount; i++) {
+      const img = new Image();
+      img.src = `images/animation/redux${(i+1).toString().padStart(3, '0')}.png`;
+      images.push(img);
+    }
 
+    //Greensock handling
+    gsap.to(buds, {
+      frame: 199,
+      snap: "frame",
+      scrollTrigger: {
+          trigger: "#explode-view",
+          pin: true, //make the animation stay in place
+          scrub: 1, //delay when it scrolls
+          markers: true,
+          start: "top top"
+      },
+      onUpdate: render
+    })
+
+    //Array with content for the earbuds hotspots
   const infoBoxes = [
     {
       title: "Sound Processor",
@@ -96,11 +132,25 @@
       let selected = document.querySelector(`#${this.slot}`);
       gsap.to(selected, 1, { autoAlpha: 0 });
     }
+
+    //RENDER ANIMATION
+
+    function render () {
+      //console.log(buds.frame);
+      //console.log(images[buds.frame]);
+
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.drawImage(images[buds.frame], 0, 0);
+
+    }
   
     //Event Listeners
 
     //HAMB MENU
     button.addEventListener("click", hamburgerMenu, false);	
+
+    //RENDER
+    images[0].addEventListener("onload", render);
 
     //MODEL VIEWER STUFF
     model.addEventListener("load", modelLoaded);

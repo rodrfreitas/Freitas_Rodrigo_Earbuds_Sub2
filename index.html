@@ -13,47 +13,87 @@
   <body>
     <h1 class="hidden">Main Page</h1>
     <!-- ++++++++++++++ HEADER ++++++++++++++++-->
-    <div id="sticky-nav">
-        <header class="grid-con" id="main-header">
-            <div id="main-logo" class="col-span-2 m-col-span-3 l-col-start-2 l-col-end-3">
-              <h2>REDUX</h2>
-                <!-- <a href="#" class="nav-logo"><img src="images/rf_logo1.svg" alt="Logo"></a> -->
+    
+    <header class="grid-con" id="main-header">
+        <div id="main-logo" class="col-span-2 m-col-span-3 l-col-start-2 l-col-end-3">
+            <a href="index.html"><img src="images/redux_logo.svg" alt="REDUX Logo"></a>
+        </div>
+        <nav id="main-nav" class="col-start-4 col-end-5 m-col-span-9 l-col-span-9">
+            <h2 class="hidden">Main Navigation</h2>
+            <button id="button"></button>
+            <div id="burger-con">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#features-img">Specs</a></li>
+                </ul>
             </div>
-            <nav id="main-nav" class="col-start-4 col-end-5 m-col-span-9 l-col-span-9">
-                <h2 class="hidden">Main Navigation</h2>
-                <button id="button"></button>
-                <div id="burger-con">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#about-section">About</a></li>
-                        <li><a href="#features-img">Specs</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-    </div>
+        </nav>
+    </header>
+ 
 
     <!-- ++++++++++++++ HERO ++++++++++++++++-->
     <section id="hero-main" class="grid-con">
       <h2 class="hidden">Hero</h2>
-      <div id="hero-content" class="box col-span-full l-col-start-2 l-col-end-12">
-          <h2>Hero Content</h2>
+      <div id="hero-content" class="col-span-full l-col-start-2 l-col-end-12">
+          <h2>Retro Redefined</h2>
+          <img src="images/hero.png" alt="Redux Earbuds">
+          <h2>Xceptional Sound</h2>
+          <p><span>Introducing Redux Earbuds</span>, where the essence of <span>retro</span> style harmoniously converges with cutting-edge <span>innovation</span>.</p>
       </div>
+  </section>
+
+  <!-- ++++++++++++++ PARTNERS ++++++++++++++++-->
+
+  <section id="partners-section">
+    <h2 class="hidden">Partners</h2>
+    <h2>Partners</h2>
+    <img src="images/amazon.svg" alt="Amazon Logo">
+    <img src="images/newegg.svg" alt="Newegg Logo">
+    <img src="images/walmart.svg" alt="Walmart Logo">
+    <img src="images/thesource.svg" alt="TheSource Logo">
   </section>
 
   <!-- ++++++++++++++ ABOUT ++++++++++++++++-->
   <section id="about-section" class="grid-con">
     <h2 class="hidden">About</h2>
-    <div id="about-content" class="box col-span-full l-col-start-2 l-col-end-12">
-        <h2>About</h2>
+    
+    <div id="about-content" class="col-span-full l-col-start-2 l-col-end-12">
+        <h2>Echoes Of The Past, Sounds Of The Future.</h2>
+        <img src="images/case.png" alt="">
+        <p><span>Redux Earbuds stand as a testament to the marriage of nostalgia and innovation</span>, offering a unique auditory journey that bridges the past and the future. Experience the revival of the old made new, <span>crafted to elevate your listening experience and style</span>.</p>
     </div>
-    <div id="features-img" class="box col-span-full l-col-start-2 l-col-end-7">
-        <h2>Features - img</h2>
+
+    <div id="about-icons" class="col-span-full">
+        <i class="ri-battery-2-charge-fill ri-2x yellow-circle"></i>
+        <p><span>Power O/P</span> | 360mAh</p>
+        <i class="ri-time-fill ri-2x yellow-circle"></i>
+        <p><span>Duration</span> | 72hrs</p>
+        <i class="ri-smartphone-fill ri-2x yellow-circle"></i>
+        <p><span>Compatibility</span> | Apple & Android</p>
     </div>
-    <div id="features-desc" class="box col-span-full l-col-start-7 l-col-end-12">
-        <h2>Features - bullet points</h2>
-    </div>
+
   </section>
+
+  <!-- ++++++++++++++ SCROLL ANIMATION ++++++++++++++++-->
+
+    <section id="scr-animation" class="full-width-grid-con">
+        <h2 class="hidden">Details Animation</h2>
+        <div id="animation-content" class="col-span-full">
+            <h2>SCR ANIMATION</h2>
+            <canvas id="explode-view"></canvas>
+        </div>
+    </section>
+
+    <!-- ++++++++++++++ SPECS ++++++++++++++++-->
+
+    <section id="specs" class="grid-con">
+        <h2 class="hidden">Specs Section</h2>
+        <div id="specs-content" class="col-span-full">
+            <h2>Vintage Vibes, Futuristic Sound</h2>
+            <p>Rediscover the allure of classic design while indulging in the latest advancements in sound technology.</p>
+        </div>
+    </section>
 
    <!-- ++++++++++++++ MODEL VIEWER ++++++++++++++++-->
     <section id="model-canvas" class="grid-con">
@@ -99,7 +139,8 @@
 
     <!-- ++++++++++++++  JS LOADERS ++++++++++++++++-->
     <!-- Loads <model-viewer> for browsers: -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
     <script src="js/main.js"></script>
   </body>
