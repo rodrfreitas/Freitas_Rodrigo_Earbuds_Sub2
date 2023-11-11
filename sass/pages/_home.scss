@@ -1,0 +1,57 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#main-logo {
+    h2 {
+        letter-spacing: 8px;
+    }
+}
+
+#about-us {
+    margin-bottom: 40px;
+}
+
+#founders section {
+    margin-bottom: 40px;
+}
+
+#hotspotIcon {
+    font-size: 32px;
+}
+
+body {
+    background-color: #FA8500;
+}
+
+#hero-main {
+    height: 300px;
+
+    h2 {
+        color: white;
+        font-size: 22px;
+        margin: auto 0;
+    }
+}
+
+#about-section {
+    h2 {
+        color: white;
+        margin: auto;
+    }
+}
+
+#about-content {
+    height: 150px;
+}
+
+#model-canvas {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    #model-canvas {
+        display: block;
+    }
+
+}
