@@ -1,0 +1,317 @@
+@font-face {
+  font-family: robotoregular;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: mulishbold;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Mulish-Bold.woff") format("woff"), url("../fonts/Mulish-Bold.woff2") format("woff2");
+}
+body {
+  font-family: "robotoregular", arial, sans-serif;
+}
+
+h2 {
+  font-family: "mulishbold", helvetica, arial;
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  model-viewer {
+    width: auto;
+    max-width: 1200px;
+    height: 700px;
+    background-color: #FA8500;
+    margin: 0 auto;
+  }
+  .Hotspot {
+    background: url(../images/hotspot2.svg) center no-repeat;
+    border: 0px;
+    width: 45px;
+    height: 38px;
+    display: none;
+    transition: all 1s ease-in-out;
+  }
+  .Hotspot:not([data-visible]) {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .HotspotAnnotation {
+    visibility: hidden;
+    background: #f0f0f0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    font-family: Futura, Helvetica Neue, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    left: calc(100% + 1em);
+    max-width: 450px;
+    overflow-wrap: break-word;
+    padding: 0.5em 1em;
+    position: absolute;
+    top: 50%;
+    width: max-content;
+    text-align: left;
+  }
+  .HotspotAnnotation p {
+    color: #333;
+    line-height: 22px;
+    font-weight: 300;
+  }
+  .HotspotAnnotation h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  model-viewer::part(default-progress-bar) {
+    height: 30px;
+    background-color: #00B3A6;
+  }
+  /* AR Rules */
+  #ar-button {
+    background-image: url(../images/ar_icon.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 12px 50%;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    bottom: 16px;
+    padding: 0px 16px 0px 40px;
+    font-family: Roboto Regular, Helvetica Neue, sans-serif;
+    font-size: 14px;
+    color: #4285f4;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 18px;
+    border: 1px solid #DADCE0;
+  }
+  #ar-button:active {
+    background-color: #E8EAED;
+  }
+  #ar-button:focus {
+    outline: none;
+  }
+  #ar-button:focus-visible {
+    outline: 1px solid #4285f4;
+  }
+  @keyframes circle {
+    from {
+      transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
+    }
+    to {
+      transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+  }
+  @keyframes elongate {
+    from {
+      transform: translateX(100px);
+    }
+    to {
+      transform: translateX(-100px);
+    }
+  }
+  model-viewer > #ar-prompt {
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    animation: elongate 2s infinite ease-in-out alternate;
+    display: none;
+  }
+  model-viewer[ar-status=session-started] > #ar-prompt {
+    display: block;
+  }
+  model-viewer > #ar-prompt > img {
+    animation: circle 4s linear infinite;
+  }
+}
+#sticky-nav {
+  position: sticky;
+  top: 0rem;
+  background-color: #DEDEDE;
+  border-bottom: solid 0.0625rem #c3c3c3;
+  z-index: 1;
+}
+
+#main-logo {
+  display: block;
+  align-self: center;
+  width: 127px;
+  margin-top: 18px;
+}
+
+#main-nav {
+  text-align: right;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#main-nav button {
+  width: 40px;
+  height: 58px;
+  background: url(../images/burger.svg) no-repeat center;
+  transition: all 0.5s ease;
+  border: 0;
+}
+
+#main-nav button.expanded {
+  transform: rotate(90deg);
+  position: relative;
+  z-index: 3;
+}
+
+#burger-con {
+  display: none;
+}
+
+#burger-con.slide-toggle {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 80px 0px 0px 0px;
+}
+
+#main-nav ul li a {
+  display: block;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  color: #626262;
+  font-size: 35px;
+  color: #fff;
+}
+
+#main-nav ul li a:hover {
+  color: #df551e;
+}
+
+#main-nav ul li:last-child {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .active {
+    background-color: #fff;
+    border-bottom: 4px solid #df551e;
+  }
+  #button {
+    display: none;
+  }
+  #burger-con {
+    display: block;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #burger-con ul li {
+    display: inline;
+  }
+  #burguer-con.slide-toggle {
+    height: auto;
+    width: auto;
+    background: none;
+    z-index: auto;
+    position: static;
+  }
+  #main-nav {
+    margin: center;
+  }
+  #main-nav ul {
+    margin: 0;
+    /* border-left: solid 1px #2e2e2e; */
+    /* padding-left: 60px; */
+    /* margin-right: 120px; */
+  }
+  #main-nav ul li a {
+    display: inline;
+    color: #2e2e2e;
+    font-size: 28px;
+  }
+  #burger-con ul li {
+    margin-right: 28px;
+  }
+  #burger-con ul li:last-child {
+    margin-right: 0px;
+  }
+}
+#footer-content {
+  height: 200px;
+}
+#footer-content h2 {
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#main-logo h2 {
+  letter-spacing: 8px;
+}
+
+#about-us {
+  margin-bottom: 40px;
+}
+
+#founders section {
+  margin-bottom: 40px;
+}
+
+#hotspotIcon {
+  font-size: 32px;
+}
+
+body {
+  background-color: #FA8500;
+}
+
+#hero-main {
+  height: 300px;
+}
+#hero-main h2 {
+  color: white;
+  font-size: 22px;
+  margin: auto 0;
+}
+
+#about-section h2 {
+  color: white;
+  margin: auto;
+}
+
+#about-content {
+  height: 150px;
+}
+
+#model-canvas {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  #model-canvas {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
