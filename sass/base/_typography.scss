@@ -7,13 +7,14 @@ body {
 h2  {
     font-family: v.$heading-font-family;
     font-size: 26px;
+    text-wrap: balance;
     color: v.$body-text-color;
     margin-bottom: 20px;
 }
 
 p {
     line-height: 30px;
-
+    text-wrap: balance;
     span {
         font-weight: bold;
     }

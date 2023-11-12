@@ -82,7 +82,7 @@ body {
     }
 
     p {
-        text-align: left;
+        text-align: center;
     }
 
     img {
@@ -95,7 +95,7 @@ body {
 }
 
 #about-icons {
-    margin-top: 30px;
+    margin-top: 0px;
     margin-bottom: 30px;
 
     p {
@@ -130,13 +130,13 @@ body {
 }
 
 #specs-content {
-    height: 1200px;
     text-align: center;
 }
 
-#model-canvas {
-    display: none;
-}
+
+// #model-canvas {
+//     display: none;
+// }
 
 @media screen and (min-width: 1200px) {
     #model-canvas {

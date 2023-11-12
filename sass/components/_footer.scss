@@ -1,8 +1,44 @@
 @use '../abstracts' as a;
 
+#footer-section {
+    background-color: a.$body-text-color;
+    margin-top: 50px;
+    text-align: center;
+}
+
 #footer-content {
-    height: 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    img {
+        width: 127px;
+    }
     h2 {
         color: white;
     }
+    p {
+        color: #6b6b6b;
+    }
 }
+
+#footer-nav {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+}
+
+#footer-nav ul li a {
+    display: block;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: a.$body-font-family;
+    font-size: 18px;
+    color: #fff;
+ }
+
+ #footer-nav ul li a:hover {
+    color: #df551e;
+ }

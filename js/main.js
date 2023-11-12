@@ -39,7 +39,7 @@
       frame: 199,
       snap: "frame",
       scrollTrigger: {
-          trigger: "#explode-view",
+          trigger: "#scr-animation",
           pin: true, //make the animation stay in place
           scrub: 1, //delay when it scrolls
           markers: true,

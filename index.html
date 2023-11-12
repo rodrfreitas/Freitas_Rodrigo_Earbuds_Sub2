@@ -89,51 +89,117 @@
 
     <section id="specs" class="grid-con">
         <h2 class="hidden">Specs Section</h2>
+
         <div id="specs-content" class="col-span-full">
             <h2>Vintage Vibes, Futuristic Sound</h2>
             <p>Rediscover the allure of classic design while indulging in the latest advancements in sound technology.</p>
         </div>
+        <div id="specs-details" class="super-card col-span-full">
+            <h2>Cutting-Edge Technology</h2>
+            <img src="images/user1.png" alt="Redux User">
+            <p>Despite the retro design, these earbuds incorporate the latest technology for exceptional sound quality and performance.</p>
+            <button class="btn-orange-line" onclick="window.location.href='#xray-section'";>Experience the Inside Story</button>
+        </div>
+
+        <div class="card col-span-full">
+            <i class="ri-surround-sound-line ri-2x yellow-circle"></i>
+            <h2>Noise Reduction System</h2>
+            <p>Elevate your audio experience to a new level with the built-in Noise Reduction System. This cutting-edge technology actively minimizes or eliminates unwanted background noise, providing you with an undistracted and immersive audio environment.</p>
+        </div>
+
+        <div class="card col-span-full">
+            <i class="ri-cpu-line ri-2x yellow-circle"></i>
+            <h2>Sound Processor</h2>
+            <p>The heart of your audio experience, the Sound Processor in these earbuds is a powerhouse of technology. It is responsible for enhancing and optimizing sound quality to deliver rich, clear, and immersive audio.</p>
+        </div>
+
+        <div class="card col-span-full">
+            <i class="ri-battery-charge-fill ri-2x yellow-circle"></i>
+            <h2>High capacity battery</h2>
+            <p>These earbuds are equipped with a high-capacity battery that ensures an extended and uninterrupted listening experience.</p>
+        </div>
+
+        <div class="card col-span-full">
+            <i class="ri-wireless-charging-line ri-2x yellow-circle"></i>
+            <h2>Charging spots</h2>
+            <p>These earbuds come with strategically placed and conveniently accessible charging spots designed to simplify the recharging process.</p>
+        </div>
+
+    </section>
+
+    <!-- ++++++++++++++ X-RAY ++++++++++++++++-->
+
+    <section id="xray-section" class="grid-con">
+        <h2 class="hidden">REDUX X-Ray</h2>
+        <h2 class="col-span-full">Experience The Inside Story</h2>
+        <p class="col-span-full">Take an X-Ray View of Your Redux Earbuds</p>
+        <div id="mobile-tablet-view" class="col-span-full">
+            <img src="images/earbud-x-ray.jpg" alt="xray earbud">
+            <img src="images/earbud.jpg" alt="regular earbud">
+        </div>
+
+        <div id="outerShell" class="col-span-full l-col-start-3 l-col-end-11">
+            <div id="imageCon">
+                <!-- xray version -->
+                <div class="slideImage image-right"></div>
+                <!-- rendered version -->
+                <div class="slideImage image-left"></div>
+                <!-- drag bar -->
+                <div class="slideImage image-drag"></div>
+            </div>
+        </div>
+
     </section>
 
    <!-- ++++++++++++++ MODEL VIEWER ++++++++++++++++-->
     <section id="model-canvas" class="grid-con">
-        <model-viewer id="model" src="model/earbud_redux.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.55" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
+        <div id="earbuds-3d-viewer" class="col-span-full">
+            <model-viewer id="model" src="model/earbud_redux.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.55" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
 
-            <!-- in this version, I have manually added, id="hotspot-1, id="hotspot-2", id="hotspot-3", id="hotspot-4"" -->
-      
-            <button class="Hotspot" slot="hotspot-1" data-position="0.24439615818390986m 1.7112315140008056m -0.5718261599540693m" data-normal="0m 0m -1m" data-visibility-attribute="visible">
-                <div class="HotspotAnnotation" id="hotspot-1">
+                <!-- in this version, I have manually added, id="hotspot-1, id="hotspot-2", id="hotspot-3", id="hotspot-4"" -->
+          
+                <button class="Hotspot" slot="hotspot-1" data-position="0.24439615818390986m 1.7112315140008056m -0.5718261599540693m" data-normal="0m 0m -1m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation" id="hotspot-1">
+                    </div>
+                </button>
+                
+                <button class="Hotspot" slot="hotspot-2" data-position="-0.09959388463574664m -0.4501301127211965m -0.6850769865638728m" data-normal="-0.0033385835968165176m -0.0008739409030897455m -0.9999940450257018m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation" id="hotspot-2">
+                    </div>
+                </button>
+                
+                <button class="Hotspot" slot="hotspot-3" data-position="-0.2918440156244586m 1.599012526552326m 1.2393127785950835m" data-normal="0.7815144746596288m 0.1165385719792859m 0.6129060997726431m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation" id="hotspot-3">
+                    </div>
+                </button>
+                
+                <button class="Hotspot" slot="hotspot-4" data-position="-0.0789083408717195m -0.6939368536440578m 0.14568425211561298m" data-normal="-0.007730848140318099m 0.7090638959674491m 0.7051018546440606m" data-visibility-attribute="visible">
+                    <div class="HotspotAnnotation" id="hotspot-4">        
+                    </div>
+                </button>
+                <button slot="ar-button" id="ar-button">
+                    View in your space
+                </button>
+                <div id="ar-prompt">
+                    <img src="images/ar_hand_prompt.png">
                 </div>
-            </button>
-            
-            <button class="Hotspot" slot="hotspot-2" data-position="-0.09959388463574664m -0.4501301127211965m -0.6850769865638728m" data-normal="-0.0033385835968165176m -0.0008739409030897455m -0.9999940450257018m" data-visibility-attribute="visible">
-                <div class="HotspotAnnotation" id="hotspot-2">
-                </div>
-            </button>
-            
-            <button class="Hotspot" slot="hotspot-3" data-position="-0.2918440156244586m 1.599012526552326m 1.2393127785950835m" data-normal="0.7815144746596288m 0.1165385719792859m 0.6129060997726431m" data-visibility-attribute="visible">
-                <div class="HotspotAnnotation" id="hotspot-3">
-                </div>
-            </button>
-            
-            <button class="Hotspot" slot="hotspot-4" data-position="-0.0789083408717195m -0.6939368536440578m 0.14568425211561298m" data-normal="-0.007730848140318099m 0.7090638959674491m 0.7051018546440606m" data-visibility-attribute="visible">
-                <div class="HotspotAnnotation" id="hotspot-4">        
-                </div>
-            </button>
-            <button slot="ar-button" id="ar-button">
-                View in your space
-            </button>
-            <div id="ar-prompt">
-                <img src="images/ar_hand_prompt.png">
-            </div>
-          </model-viewer>  
+              </model-viewer>
+        </div>
     </section>
 
     <!-- ++++++++++++++ FOOTER ++++++++++++++++-->
     <footer id="footer-section">
         <h2 class="hidden">Footer</h2>
-        <div id="footer-content" class="box">
-            <h2>Footer</h2>
+        <div id="footer-content" class="col-span-full">
+            <img src="images/redux_logo.svg" alt="">
+            <div id="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#features-img">Specs</a></li>
+                </ul>
+            </div>
+            <p>2023 © Built and designed by Rodrigo Freitas</p>
         </div>
     </footer>
 
@@ -142,6 +208,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+    <script src="js/xray.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
