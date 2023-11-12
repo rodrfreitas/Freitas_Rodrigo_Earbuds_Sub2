@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as a;
+
+.super-card {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 18px;
+
+    img {
+        width: 200px;
+        margin-bottom: 15px;
+    }
+}
+
+.card {
+    // height: 450px; //for tablet+
+    margin-top: 30px;
+    padding: 20px;
+    padding-top: 35px;
+    padding-bottom: 30px; //no need for tablet+
+    text-align: center;
+    background-color: a.$body-text-color;
+    border-radius: 18px;
+
+    h2 {
+        margin-top: 30px;
+        color: #fff;
+    }
+
+    p {
+        color: #fff;
+    }
+
+}

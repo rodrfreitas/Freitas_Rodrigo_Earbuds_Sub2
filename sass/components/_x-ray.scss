@@ -1,0 +1,68 @@
+#outerShell {
+    display: none;
+}
+
+#xray-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#mobile-tablet-view {
+    margin-top: 30px;
+    img {
+        margin-bottom: 15px;
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+
+    #mobile-tablet-view {
+        display: none;
+      }
+
+    #outerShell {
+        display: block;
+        margin-top: 30px;
+        max-width: 1280px;
+        border: solid 1px #d3d3d3;
+    }
+    
+    #imageCon {
+        position: relative;
+        max-width: 1280px;
+        height: 720px;
+    }
+    
+    .slideImage {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 720px;
+    }
+    
+    .image-right {
+        background: url(../images/earbud-x-ray_m.jpg) no-repeat;
+        background-size: cover;
+        // background-position: center center;
+        // background-attachment: fixed;
+    }
+    
+    .image-left {
+        background: url(../images/earbud_m.jpg) no-repeat;
+        background-size: cover;
+        // background-position: center center;
+        width: 50%;
+        // background-attachment: fixed;
+    }
+    
+    .image-drag {
+        background-color: #666;
+        left: 50%;
+        width: 10px;
+        cursor: pointer;
+    }
+}
+
+
+

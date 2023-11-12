@@ -23,15 +23,64 @@ body {
 h2 {
   font-family: "mulishbold", helvetica, arial;
   font-size: 26px;
+  text-wrap: balance;
   color: #1a1a1a;
   margin-bottom: 20px;
 }
 
 p {
   line-height: 30px;
+  text-wrap: balance;
 }
 p span {
   font-weight: bold;
+}
+
+model-viewer {
+  background-color: #333;
+  width: auto;
+  max-width: 1920px;
+  height: 500px;
+}
+
+.Hotspot {
+  background: url(../images/hotspot2.svg) center no-repeat;
+  border: 0px;
+  width: 8px;
+  height: 38px;
+  display: none;
+  transition: all 1s ease-in-out;
+}
+
+.HotspotAnnotation {
+  visibility: hidden;
+  background: #f0f0f0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.8);
+  display: block;
+  font-family: Futura, Helvetica Neue, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  left: calc(100% + 1em);
+  max-width: 100px;
+  overflow-wrap: break-word;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: 50%;
+  width: max-content;
+  text-align: left;
+}
+
+.HotspotAnnotation p {
+  color: #333;
+  line-height: 8px;
+  font-weight: 300;
+}
+
+.HotspotAnnotation h2 {
+  font-size: 8px;
+  margin-bottom: 5px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -264,17 +313,150 @@ p span {
     margin-right: 0px;
   }
 }
+#footer-section {
+  background-color: #1a1a1a;
+  margin-top: 50px;
+  text-align: center;
+}
+
 #footer-content {
-  height: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#footer-content img {
+  width: 127px;
 }
 #footer-content h2 {
   color: white;
+}
+#footer-content p {
+  color: #6b6b6b;
+}
+
+#footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#footer-nav ul li a {
+  display: block;
+  padding: 20px 0 10px 0;
+  text-align: center;
+  text-decoration: none;
+  font-family: "robotoregular", arial, sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+#footer-nav ul li a:hover {
+  color: #df551e;
 }
 
 #explode-view {
   background-color: #E2E3E3;
   max-width: 100%;
   /* width: 100vw; */
+}
+
+.super-card {
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 18px;
+}
+.super-card img {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.card {
+  margin-top: 30px;
+  padding: 20px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: #1a1a1a;
+  border-radius: 18px;
+}
+.card h2 {
+  margin-top: 30px;
+  color: #fff;
+}
+.card p {
+  color: #fff;
+}
+
+#outerShell {
+  display: none;
+}
+
+#xray-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#mobile-tablet-view {
+  margin-top: 30px;
+}
+#mobile-tablet-view img {
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 1200px) {
+  #mobile-tablet-view {
+    display: none;
+  }
+  #outerShell {
+    display: block;
+    margin-top: 30px;
+    max-width: 1280px;
+    border: solid 1px #d3d3d3;
+  }
+  #imageCon {
+    position: relative;
+    max-width: 1280px;
+    height: 720px;
+  }
+  .slideImage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 720px;
+  }
+  .image-right {
+    background: url(../images/earbud-x-ray_m.jpg) no-repeat;
+    background-size: cover;
+  }
+  .image-left {
+    background: url(../images/earbud_m.jpg) no-repeat;
+    background-size: cover;
+    width: 50%;
+  }
+  .image-drag {
+    background-color: #666;
+    left: 50%;
+    width: 10px;
+    cursor: pointer;
+  }
+}
+.btn-orange-line {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 8px 16px 8px 16px;
+  background-color: #fff;
+  color: #df551e;
+  border: solid 2px #df551e;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "robotoregular", arial, sans-serif;
+}
+
+.btn-orange-line:hover {
+  background-color: #df551e;
+  color: #fff;
 }
 
 html {
@@ -350,7 +532,7 @@ body {
   line-height: 40px;
 }
 #about-section p {
-  text-align: left;
+  text-align: center;
 }
 #about-section img {
   margin-bottom: 10px;
@@ -361,7 +543,7 @@ body {
 }
 
 #about-icons {
-  margin-top: 30px;
+  margin-top: 0px;
   margin-bottom: 30px;
 }
 #about-icons p {
@@ -395,12 +577,7 @@ body {
 }
 
 #specs-content {
-  height: 1200px;
   text-align: center;
-}
-
-#model-canvas {
-  display: none;
 }
 
 @media screen and (min-width: 1200px) {

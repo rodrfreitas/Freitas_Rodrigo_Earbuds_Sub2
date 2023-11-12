@@ -1,6 +1,50 @@
-  // Customize our own hotspot 
+model-viewer {
+  background-color: #333;
+  width: auto;
+  max-width: 1920px;
+  height: 500px;
+  // margin: 0 auto;
+}
 
-  
+.Hotspot {
+  background: url(../images/hotspot2.svg) center no-repeat;
+  border: 0px;
+  width: 8px;
+  height: 38px;
+  display: none;
+  transition: all 1s ease-in-out;
+}
+
+.HotspotAnnotation{
+  visibility: hidden;
+  background: #f0f0f0;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.8);
+  display: block;
+  font-family: Futura, Helvetica Neue, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  left: calc(100% + 1em);
+  max-width: 100px;
+  overflow-wrap: break-word;
+  padding: 0.5em 1em;
+  position: absolute;
+  top: 50%;
+  width: max-content;
+  text-align: left;
+}
+
+.HotspotAnnotation p {
+  color: #333;
+  line-height: 8px;
+  font-weight: 300;
+}
+
+.HotspotAnnotation h2 {
+  font-size: 8px;
+  margin-bottom: 5px;
+}
 
   @media screen and (min-width: 1200px) {
     model-viewer {
@@ -11,7 +55,6 @@
       margin: 0 auto;
     }
     
-    // Customize our own hotspot
     .Hotspot {
       background: url(../images/hotspot2.svg) center no-repeat;
       border: 0px;
