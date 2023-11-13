@@ -14,8 +14,36 @@ h2  {
 
 p {
     line-height: 30px;
+    color:rgb(56, 56, 56);
     text-wrap: balance;
     span {
         font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    h2 {
+        font-family: v.$hero-font-family;
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    p {
+        font-size: 22px;
+        line-height: 36px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+
+    h2 {
+        font-family: v.$hero-font-family;
+        font-size: 56px;
+    }
+
+    p {
+        font-size: 28px;
+        line-height: 50px;
     }
 }

@@ -25,7 +25,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#about-section">About</a></li>
-                    <li><a href="#features-img">Specs</a></li>
+                    <li><a href="#specs">Specs</a></li>
                 </ul>
             </div>
         </nav>
@@ -40,6 +40,10 @@
           <img src="images/hero.png" alt="Redux Earbuds">
           <h2>Xceptional Sound</h2>
           <p><span>Introducing Redux Earbuds</span>, where the essence of <span>retro</span> style harmoniously converges with cutting-edge <span>innovation</span>.</p>
+      </div>
+      <div id="hero-content-l" class="col-span-full l-col-start-2 l-col-end-12">
+        <img src="images/hero_l_2.png" alt="REDUX EARBUDS">
+        <p><span>Introducing Redux Earbuds</span>, where the essence of <span>retro</span> style harmoniously converges with cutting-edge <span>innovation</span>.</p>
       </div>
   </section>
 
@@ -59,18 +63,29 @@
     <h2 class="hidden">About</h2>
     
     <div id="about-content" class="col-span-full l-col-start-2 l-col-end-12">
-        <h2>Echoes Of The Past, Sounds Of The Future.</h2>
-        <img src="images/case.png" alt="">
-        <p><span>Redux Earbuds stand as a testament to the marriage of nostalgia and innovation</span>, offering a unique auditory journey that bridges the past and the future. Experience the revival of the old made new, <span>crafted to elevate your listening experience and style</span>.</p>
-    </div>
 
-    <div id="about-icons" class="col-span-full">
-        <i class="ri-battery-2-charge-fill ri-2x yellow-circle"></i>
-        <p><span>Power O/P</span> | 360mAh</p>
-        <i class="ri-time-fill ri-2x yellow-circle"></i>
-        <p><span>Duration</span> | 72hrs</p>
-        <i class="ri-smartphone-fill ri-2x yellow-circle"></i>
-        <p><span>Compatibility</span> | Apple & Android</p>
+        <div class="row">
+            <div class="column">
+                <div id="about-text">
+                    <h2>Echoes Of The Past, Sounds Of The Future.</h2>
+                    <p><span>Redux Earbuds stand as a testament to the marriage of nostalgia and innovation</span>, offering a unique auditory journey that bridges the past and the future. Experience the revival of the old made new, <span>crafted to elevate your listening experience and style</span>.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div id="about-img">
+                    <img src="images/case_l.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="about-icons" class="col-span-full">
+            <i class="ri-battery-2-charge-fill ri-2x yellow-circle2"></i>
+            <p><span>Power O/P</span> | 360mAh</p>
+            <i class="ri-time-fill ri-2x yellow-circle2"></i>
+            <p><span>Duration</span> | 72hrs</p>
+            <i class="ri-smartphone-fill ri-2x yellow-circle2"></i>
+            <p><span>Compatibility</span> | Apple & Android</p>
+        </div>
     </div>
 
   </section>
@@ -80,7 +95,7 @@
     <section id="scr-animation" class="full-width-grid-con">
         <h2 class="hidden">Details Animation</h2>
         <div id="animation-content" class="col-span-full">
-            <h2>SCR ANIMATION</h2>
+            <h2>Classic Looks</h2>
             <canvas id="explode-view"></canvas>
         </div>
     </section>
@@ -94,32 +109,33 @@
             <h2>Vintage Vibes, Futuristic Sound</h2>
             <p>Rediscover the allure of classic design while indulging in the latest advancements in sound technology.</p>
         </div>
-        <div id="specs-details" class="super-card col-span-full">
+
+        <div id="specs-details" class="super-card col-span-full l-col-start-2 l-col-end-12">
             <h2>Cutting-Edge Technology</h2>
             <img src="images/user1.png" alt="Redux User">
             <p>Despite the retro design, these earbuds incorporate the latest technology for exceptional sound quality and performance.</p>
             <button class="btn-orange-line" onclick="window.location.href='#xray-section'";>Experience the Inside Story</button>
         </div>
 
-        <div class="card col-span-full">
+        <div class="card col-span-full l-col-start-2 l-col-span-5">
             <i class="ri-surround-sound-line ri-2x yellow-circle"></i>
             <h2>Noise Reduction System</h2>
             <p>Elevate your audio experience to a new level with the built-in Noise Reduction System. This cutting-edge technology actively minimizes or eliminates unwanted background noise, providing you with an undistracted and immersive audio environment.</p>
         </div>
 
-        <div class="card col-span-full">
+        <div class="card col-span-full l-col-span-5">
             <i class="ri-cpu-line ri-2x yellow-circle"></i>
             <h2>Sound Processor</h2>
             <p>The heart of your audio experience, the Sound Processor in these earbuds is a powerhouse of technology. It is responsible for enhancing and optimizing sound quality to deliver rich, clear, and immersive audio.</p>
         </div>
 
-        <div class="card col-span-full">
+        <div class="card col-span-full l-col-start-2 l-col-span-5">
             <i class="ri-battery-charge-fill ri-2x yellow-circle"></i>
             <h2>High capacity battery</h2>
             <p>These earbuds are equipped with a high-capacity battery that ensures an extended and uninterrupted listening experience.</p>
         </div>
 
-        <div class="card col-span-full">
+        <div class="card col-span-full l-col-span-5">
             <i class="ri-wireless-charging-line ri-2x yellow-circle"></i>
             <h2>Charging spots</h2>
             <p>These earbuds come with strategically placed and conveniently accessible charging spots designed to simplify the recharging process.</p>
@@ -153,6 +169,9 @@
 
    <!-- ++++++++++++++ MODEL VIEWER ++++++++++++++++-->
     <section id="model-canvas" class="grid-con">
+        <h2 class="hidden">Earbuds 3D Viewer</h2>
+        <h2 id="model-viewer-h2" class="col-span-full">Explore Every Angle</h2>
+        <p id="model-viewer-p" class="col-span-full">Dive into the Sound with Our Interactive 3D Model Viewer for Redux Earbuds</p>
         <div id="earbuds-3d-viewer" class="col-span-full">
             <model-viewer id="model" src="model/earbud_redux.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.55" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
 
@@ -196,7 +215,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#about-section">About</a></li>
-                    <li><a href="#features-img">Specs</a></li>
+                    <li><a href="#specs">Specs</a></li>
                 </ul>
             </div>
             <p>2023 © Built and designed by Rodrigo Freitas</p>

@@ -1,9 +1,19 @@
+#model-canvas {
+  margin-top: 50px;
+}
+
+#model-viewer-h2 {
+  text-align: center;
+}
+
+#model-viewer-p {
+  text-align: center;
+}
+
 model-viewer {
-  background-color: #333;
   width: auto;
   max-width: 1920px;
   height: 500px;
-  // margin: 0 auto;
 }
 
 .Hotspot {
@@ -51,7 +61,7 @@ model-viewer {
       width: auto;
       max-width: 1200px;
       height: 700px;
-      background-color: #FA8500;
+      // background-color: #ffffff;
       margin: 0 auto;
     }
     
