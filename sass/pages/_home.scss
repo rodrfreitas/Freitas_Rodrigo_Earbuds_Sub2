@@ -133,6 +133,10 @@ body {
     }
 }
 
+#about-text {
+    margin-bottom: 30px;
+}
+
 .yellow-circle {
     background-color: #F8C200;
     border-radius: 50%;
@@ -191,6 +195,25 @@ body {
     #about-img {
         margin-left: auto;
         width: 80%;
+        opacity: 0;
+    }
+
+    #about-text {
+        opacity: 0;
+    }
+
+    #about-icons {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    #specs-img img {
+        width: 50%;
+        // background-color: red;
+    }
+
+    #specs-text {
+        text-align: left;
     }
 }
 
@@ -198,6 +221,13 @@ body {
     #about-img {
         margin-left: auto;
         width: 75%;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    #specs-text {
+        text-align: left;
     }
 
 }

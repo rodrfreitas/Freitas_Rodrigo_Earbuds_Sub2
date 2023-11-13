@@ -111,10 +111,20 @@
         </div>
 
         <div id="specs-details" class="super-card col-span-full l-col-start-2 l-col-end-12">
-            <h2>Cutting-Edge Technology</h2>
-            <img src="images/user1.png" alt="Redux User">
-            <p>Despite the retro design, these earbuds incorporate the latest technology for exceptional sound quality and performance.</p>
-            <button class="btn-orange-line" onclick="window.location.href='#xray-section'";>Experience the Inside Story</button>
+            <div class="row">
+                <div class="column">
+                    <div id="specs-text">
+                        <h2>Cutting-Edge Technology</h2>
+                        <p>Despite the retro design, these earbuds incorporate the latest technology for exceptional sound quality and performance.</p>
+                        <button class="btn-orange-line" onclick="window.location.href='#xray-section'">Experience the Inside Story</button>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="specs-img">
+                        <img src="images/user1.png" alt="Redux User">
+                    </div>
+                </div>
+            </div>             
         </div>
 
         <div class="card col-span-full l-col-start-2 l-col-span-5">
@@ -174,8 +184,6 @@
         <p id="model-viewer-p" class="col-span-full">Dive into the Sound with Our Interactive 3D Model Viewer for Redux Earbuds</p>
         <div id="earbuds-3d-viewer" class="col-span-full">
             <model-viewer id="model" src="model/earbud_redux.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.55" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
-
-                <!-- in this version, I have manually added, id="hotspot-1, id="hotspot-2", id="hotspot-3", id="hotspot-4"" -->
           
                 <button class="Hotspot" slot="hotspot-1" data-position="0.24439615818390986m 1.7112315140008056m -0.5718261599540693m" data-normal="0m 0m -1m" data-visibility-attribute="visible">
                     <div class="HotspotAnnotation" id="hotspot-1">
@@ -228,6 +236,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
     <script src="js/xray.js"></script>
+    <script src="js/transitions.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

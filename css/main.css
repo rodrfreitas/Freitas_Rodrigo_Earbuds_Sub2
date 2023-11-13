@@ -421,6 +421,17 @@ model-viewer {
 }
 
 @media screen and (min-width: 1600px) {
+  .super-card {
+    padding-top: 80px;
+    padding-left: 80px;
+    padding-bottom: 80px;
+  }
+  .super-card h2 {
+    text-align: left;
+  }
+  .super-card p {
+    text-align: left;
+  }
   .card {
     display: grid;
     place-items: center;
@@ -483,7 +494,7 @@ model-viewer {
     width: 50%;
   }
   .image-drag {
-    background-color: #666;
+    background-color: #F8C200;
     left: 50%;
     width: 10px;
     cursor: pointer;
@@ -623,6 +634,10 @@ body {
   text-align: center;
 }
 
+#about-text {
+  margin-bottom: 30px;
+}
+
 .yellow-circle {
   background-color: #F8C200;
   border-radius: 50%;
@@ -673,12 +688,31 @@ body {
   #about-img {
     margin-left: auto;
     width: 80%;
+    opacity: 0;
+  }
+  #about-text {
+    opacity: 0;
+  }
+  #about-icons {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  #specs-img img {
+    width: 50%;
+  }
+  #specs-text {
+    text-align: left;
   }
 }
 @media screen and (min-width: 900px) {
   #about-img {
     margin-left: auto;
     width: 75%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #specs-text {
+    text-align: left;
   }
 }
 @media screen and (min-width: 1600px) {
