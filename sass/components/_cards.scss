@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as a;
 
 .super-card {
+
     margin-top: 30px;
     padding: 20px;
     text-align: center;
@@ -35,6 +36,22 @@
 }
 
 @media screen and (min-width: 1600px) {
+
+    .super-card {
+
+        padding-top: 80px;
+        padding-left: 80px;
+        padding-bottom: 80px;
+
+
+        h2 {
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+        }
+    }
 
     .card {
         // display: flex;
